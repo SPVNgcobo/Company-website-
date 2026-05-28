@@ -462,7 +462,44 @@ section{padding:6rem 0}
 .service-tile-body p{font-size:.83rem;color:var(--text-mid);line-height:1.65}
 @media(max-width:680px){.services-subgrid{grid-template-columns:1fr}}
 
-/* ─── PROCESS ─────────────────────────────────────────────── */
+/* ─── SUPPORT PACKAGES ────────────────────────────────────── */
+.packages {background: var(--parchment); padding: 6rem 0;}
+.packages-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 2rem; margin-top: 3.5rem;
+}
+.package-card {
+  background: var(--white); border-radius: var(--radius-lg);
+  padding: 3rem 2.5rem; position: relative; overflow: hidden;
+  border: 1px solid var(--fog);
+  transition: transform 0.3s var(--ease-spring), box-shadow 0.3s;
+  display: flex; flex-direction: column;
+}
+.package-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(12, 27, 58, 0.08);
+  border-color: var(--gold);
+}
+.package-popular {
+  position: absolute; top: 0; left: 0; right: 0;
+  background: var(--gold); color: var(--ink);
+  text-align: center; font-size: 0.75rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase; padding: 0.4rem 0;
+}
+.package-card.popular { border: 2px solid var(--gold); padding-top: 3.5rem; }
+.package-name {
+  font-family: 'Playfair Display', serif; font-size: 1.5rem;
+  font-weight: 700; color: var(--navy); margin-bottom: 0.5rem;
+}
+.package-desc { font-size: 0.85rem; color: var(--text-mid); line-height: 1.6; margin-bottom: 2rem; }
+.package-features { display: flex; flex-direction: column; gap: 0.85rem; margin-bottom: 2.5rem; flex-grow: 1; }
+.package-feature { display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.85rem; color: var(--text-body); line-height: 1.5; }
+.package-feature i { color: var(--gold); font-size: 0.9rem; margin-top: 0.2rem; flex-shrink: 0; }
+.package-cta { width: 100%; text-align: center; justify-content: center; }
+
+@media(max-width: 960px) { .packages-grid { grid-template-columns: 1fr; max-width: 500px; margin-left: auto; margin-right: auto; } }
+  
+/* ───  ─────────────────────────────────────────────── */
 .process{background:var(--ink);padding:6rem 0}
 .process-grid{
   display:grid;grid-template-columns:repeat(4,1fr);
@@ -786,14 +823,14 @@ footer{background:var(--ink);padding:5rem 0 0;border-top:1px solid var(--rule)}
           <span class="label text-gold" style="opacity:.8">Est. 2020</span>
         </div>
 
-        <h1 class="display-xl hero-h1" id="hero-heading">
-          Technology that<br>
-          <em>moves your business</em><br>
-          forward.
+     <h1 class="display-xl hero-h1" id="hero-heading">
+          We keep your business<br>
+          <em>secure, connected,</em><br>
+          and operational.
         </h1>
 
         <p class="hero-desc">
-          From IT infrastructure and digital solutions to documentation support and precision design — Athash Technologies delivers reliable, professional services built for South African businesses.
+          Enterprise-grade IT support, managed digital infrastructure, and seamless operational solutions designed for South African businesses. Stop worrying about downtime and focus on growth.
         </p>
 
         <div class="hero-actions">
@@ -869,6 +906,21 @@ footer{background:var(--ink);padding:5rem 0 0;border-top:1px solid var(--rule)}
   </div>
 </div>
 
+  <!-- ══════════════════════════════════════════════
+     VERIFIED EXPERTISE
+═══════════════════════════════════════════════ -->
+<section class="expertise" style="background: var(--white); padding: 6rem 0; border-bottom: 1px solid var(--fog);" aria-labelledby="expertise-heading">
+  <div class="wrap-narrow text-center">
+    <span class="label text-gold">Institutional Grade</span>
+    <h2 class="display-md" id="expertise-heading" style="color: var(--navy); margin-top: 0.5rem; margin-bottom: 1.5rem;">Enterprise-level experience, scaled for your business.</h2>
+    <p class="lead">
+      Your business infrastructure shouldn't be left to trial and error. Athash Technologies brings formal, institutional-grade technical foundations to every project. Backed by a <strong>National Diploma in Computer Systems Engineering from Tshwane University of Technology</strong>, our solutions are engineered for stability from the ground up.
+    </p>
+    <p class="lead" style="margin-top: 1.5rem;">
+      With a hands-on professional background in corporate network support, systems training, and infrastructure maintenance, we understand what it takes to keep high-stakes operations running. Furthermore, full regional field-based mobility ensures that complex hardware setups, router configurations, and on-site troubleshooting are handled directly at your premises, exactly when you need them.
+    </p>
+  </div>
+</section>
 
 <!-- ══════════════════════════════════════════════
      SERVICE DIVISIONS
@@ -1060,6 +1112,17 @@ footer{background:var(--ink);padding:5rem 0 0;border-top:1px solid var(--rule)}
             <h4>File & Format Conversion</h4>
             <p>Convert documents between PDF, Word, Excel, PowerPoint and other formats quickly and accurately.</p>
           </div>
+      <div style="text-align: center; margin-top: 3.5rem;">
+        <a href="#contact" class="btn-navy">
+          Get Admin & Doc Support 
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div style="text-align: center; margin-top: 3.5rem;">
+        <a href="#contact" class="btn-navy">
+          Book a Free IT Consultation <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
         </div>
         <div class="service-tile reveal reveal-d1">
           <div class="service-tile-icon" aria-hidden="true"><i class="fa-solid fa-file-medical"></i></div>
@@ -1094,6 +1157,12 @@ footer{background:var(--ink);padding:5rem 0 0;border-top:1px solid var(--rule)}
             <h4>Image Enhancement & Restoration</h4>
             <p>Professionally improve photo quality, restore old or damaged images, and prepare visuals for print or digital use.</p>
           </div>
+      <div style="text-align: center; margin-top: 3.5rem;">
+        <a href="#contact" class="btn-navy">
+          Request a Design Quote 
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
         </div>
         <div class="service-tile reveal reveal-d1">
           <div class="service-tile-icon" aria-hidden="true"><i class="fa-solid fa-house-chimney"></i></div>
@@ -1121,6 +1190,63 @@ footer{background:var(--ink);padding:5rem 0 0;border-top:1px solid var(--rule)}
   </div>
 </section>
 
+  <!-- ══════════════════════════════════════════════
+     SUPPORT PACKAGES
+═══════════════════════════════════════════════ -->
+<section class="packages" id="support-packages" aria-labelledby="pkg-heading">
+  <div class="wrap">
+    <div class="section-header center reveal">
+      <span class="label text-gold">Technology Partner</span>
+      <h2 class="display-md" id="pkg-heading">Managed IT Support Packages</h2>
+      <span class="gold-line center"></span>
+      <p>Move away from unpredictable repair costs. Stabilize your operations with dedicated, reliable technology management.</p>
+    </div>
+
+    <div class="packages-grid">
+      <!-- Bronze Package -->
+      <div class="package-card reveal">
+        <h3 class="package-name">Bronze</h3>
+        <p class="package-desc">Baseline peace of mind for small businesses needing reliable remote administration.</p>
+        <div class="package-features">
+          <div class="package-feature"><i class="fa-solid fa-check"></i> <span>Remote desktop and user support</span></div>
+          <div class="package-feature"><i class="fa-solid fa-check"></i> <span>Microsoft 365 & Google Workspace administration</span></div>
+          <div class="package-feature"><i class="fa-solid fa-check"></i> <span>Basic cloud backup monitoring</span></div>
+          <div class="package-feature"><i class="fa-solid fa-check"></i> <span>Standard response time SLAs</span></div>
+        </div>
+        <a href="#contact" class="btn-ghost package-cta" style="color:var(--navy); border-color:var(--rule);">Get Quote</a>
+      </div>
+
+      <!-- Silver Package -->
+      <div class="package-card popular reveal reveal-d1">
+        <div class="package-popular">Most Popular</div>
+        <h3 class="package-name">Silver</h3>
+        <p class="package-desc">Proactive network maintenance and targeted support for growing retail and office teams.</p>
+        <div class="package-features">
+          <div class="package-feature"><i class="fa-solid fa-check"></i> <span><strong>Everything in Bronze, plus:</strong></span></div>
+          <div class="package-feature"><i class="fa-solid fa-check"></i> <span>Routine network health and security updates</span></div>
+          <div class="package-feature"><i class="fa-solid fa-check"></i> <span>Point of Sale (POS) system setup & troubleshooting</span></div>
+          <div class="package-feature"><i class="fa-solid fa-check"></i> <span>Priority response time SLAs</span></div>
+          <div class="package-feature"><i class="fa-solid fa-check"></i> <span>Employee systems training sessions</span></div>
+        </div>
+        <a href="#contact" class="btn-primary package-cta">Get Quote</a>
+      </div>
+
+      <!-- Gold Package -->
+      <div class="package-card reveal reveal-d2">
+        <h3 class="package-name">Gold</h3>
+        <p class="package-desc">Comprehensive infrastructure management with dedicated on-site and field-based interventions.</p>
+        <div class="package-features">
+          <div class="package-feature"><i class="fa-solid fa-check"></i> <span><strong>Everything in Silver, plus:</strong></span></div>
+          <div class="package-feature"><i class="fa-solid fa-check"></i> <span>Regional on-site field support deployments</span></div>
+          <div class="package-feature"><i class="fa-solid fa-check"></i> <span>Hardware lifecycle management & router configurations</span></div>
+          <div class="package-feature"><i class="fa-solid fa-check"></i> <span>Strategic technology consulting & scaling roadmaps</span></div>
+          <div class="package-feature"><i class="fa-solid fa-check"></i> <span>Immediate critical response SLA</span></div>
+        </div>
+        <a href="#contact" class="btn-ghost package-cta" style="color:var(--navy); border-color:var(--rule);">Get Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ══════════════════════════════════════════════
      PROCESS
