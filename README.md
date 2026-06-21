@@ -1,4 +1,4 @@
-# ATHASH Digital Solutions — Website (Final)
+# ATHASH Digital Solutions — Website
 
 > **File:** `athash-website-final.html`
 > **Type:** Single-file HTML website (no build tools, no dependencies, no server required)
